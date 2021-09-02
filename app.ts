@@ -1,23 +1,26 @@
-interface User {
-    id:number;
-    name:string;
-    age:number;
-    isgood:boolean;
-}
+ function add(num1:number, num2:number) {
+     console.log(num1+num2);
+ }
+
+ add(); //error
+ add(1,2);
+ add(1,2,3); //error
+ add("hello","world"); //error
 
 
-const User1: User = {
-    id: 1 ,
-    name:"plus",
-    age : 20,
-    isgood:true,
-}
+ interface User {
+     name:string;
+     age:number;
+     gender? :string;
+     [grade:number] :string;
+ }
+  
+ let user: User = {
+     name:'xx',
+     age : 30
+     
+ }
 
-
-console.log(user1.id);
-console.log(user1.name);
-console.log(user1.age);
-console.log(user1.isgood);
-
-
-
+ user.age =10;
+ user.gender = "male"
+ 

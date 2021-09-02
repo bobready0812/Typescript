@@ -1,26 +1,21 @@
- function add(num1:number, num2:number) {
-     console.log(num1+num2);
- }
+interface Car {
+    name: "car";
+    color: string;
+    start():void;
+}
 
- add(); //error
- add(1,2);
- add(1,2,3); //error
- add("hello","world"); //error
+interface Mobile {
+    name:"mobile";
+    color:string;
+    call():void;
+}
 
 
- interface User {
-     name:string;
-     age:number;
-     gender? :string;
-     [grade:number] :string;
- }
-  
- let user: User = {
-     name:'xx',
-     age : 30
-     
- }
-
- user.age =10;
- user.gender = "male"
- 
+function getGift(gift: Car | Mobile) {
+    console.log(gift.color);
+    if(gift.name === "car") {
+        gift.start ();
+    } else {
+        gift.call();
+    }
+}

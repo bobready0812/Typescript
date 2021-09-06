@@ -1,21 +1,10 @@
-interface Car {
-    name: "car";
-    color: string;
-    start():void;
-}
-
-interface Mobile {
-    name:"mobile";
-    color:string;
-    call():void;
+export function start() {
+    const button = document.querySelector("button");
+    button?.addEventListener("click", handleClick);
 }
 
 
-function getGift(gift: Car | Mobile) {
-    console.log(gift.color);
-    if(gift.name === "car") {
-        gift.start ();
-    } else {
-        gift.call();
-    }
+function handleClick(this:HTMLElement, ev: Event) {
+    ev.preventDefault();
+    this.innerText ="강아지"; 
 }

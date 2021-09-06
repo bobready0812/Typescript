@@ -1,10 +1,11 @@
-export function start() {
-    const button = document.querySelector("button");
-    button?.addEventListener("click", handleClick);
+const button:HTMLElement = document.querySelector("button");
+const h1:HTMLElement = document.querySelector("h1");
+
+
+function textChange():void{
+    h1.innerText = "강아지";
 }
 
 
-function handleClick(this:HTMLElement, ev: Event) {
-    ev.preventDefault();
-    this.innerText ="강아지"; 
-}
+
+button.addEventListener("click", textChange);

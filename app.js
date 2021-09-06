@@ -1,12 +1,6 @@
-"use strict";
-exports.__esModule = true;
-exports.start = void 0;
-function start() {
-    var button = document.querySelector("button");
-    button === null || button === void 0 ? void 0 : button.addEventListener("click", handleClick);
+var button = document.querySelector("button");
+var h1 = document.querySelector("h1");
+function textChange() {
+    h1.innerText = "강아지";
 }
-exports.start = start;
-function handleClick(ev) {
-    ev.preventDefault();
-    this.innerText = "강아지";
-}
+button.addEventListener("click", textChange);
